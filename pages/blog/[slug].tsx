@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { createClient } from 'next-sanity'
 import PortableText from "react-portable-text"
 import Navbar from '@/components/navbar'
+import Link from 'next/link'
 
 const Post = ({ blog, profile }) => {
   const router = useRouter()
@@ -12,7 +13,7 @@ const Post = ({ blog, profile }) => {
   return <>
 
     <Head>
-      <meta charset="utf-8" />
+      {/* <meta charset="utf-8" /> */}
 
       <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 
@@ -55,7 +56,7 @@ const Post = ({ blog, profile }) => {
       <meta name="twitter:site" content="@tailwindmade" />
 
       <link
-        crossorigin="crossorigin"
+        // crossorigin="crossorigin"
         href="https://fonts.gstatic.com"
         rel="preconnect"
       />
@@ -77,7 +78,7 @@ const Post = ({ blog, profile }) => {
       />
 
       <link
-        crossorigin="anonymous"
+        // crossorigin="anonymous"
         href="/assets/styles/main.min.css"
         media="screen"
         rel="stylesheet"
@@ -97,7 +98,7 @@ const Post = ({ blog, profile }) => {
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css"
       />
 
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js" async/>
 
       <script>
         hljs.highlightAll();
@@ -387,28 +388,28 @@ const Post = ({ blog, profile }) => {
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
           </div>
           <div className="flex pt-10">
-            <a
+            <Link
               href="/"
               className="rounded-xl bg-primary px-4 py-1 font-body font-bold text-white hover:bg-grey-20"
-            >Frontend</a      >
-            <a
+            >Frontend</Link      >
+            <Link
               href="/"
               className="ml-2 block rounded-xl bg-primary px-4 py-1 font-body font-bold text-white hover:bg-grey-20"
-            >Design</a      >
+            >Design</Link     >
           </div>
           <div className="mt-10 flex justify-between border-t border-lila py-12">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <i className="bx bx-left-arrow-alt text-2xl text-primary"></i>
               <span
                 className="block pl-2 font-body text-lg font-bold uppercase text-primary md:pl-5"
               >Previous Post</span        >
-            </a>
-            <a href="/" className="flex items-center">
+            </Link>
+            <Link href="/" className="flex items-center">
               <span
                 className="block pr-2 font-body text-lg font-bold uppercase text-primary md:pr-5"
               >Next Post</span        >
               <i className="bx bx-right-arrow-alt text-2xl text-primary"></i>
-            </a>
+            </Link>
           </div>
           <div
             className="flex flex-col items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20"
@@ -431,31 +432,31 @@ const Post = ({ blog, profile }) => {
 
               </p>
               <div className="flex items-center justify-center pt-5 md:justify-start">
-                <a href="/">
+                <Link href="/">
                   <i
                     className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"
                   ></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i
                     className="bx bxl-twitter text-2xl text-primary hover:text-yellow"
                   ></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i
                     className="bx bxl-dribbble text-2xl text-primary hover:text-yellow"
                   ></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i
                     className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"
                   ></i>
-                </a>
-                <a href="/" className="pl-4">
+                </Link>
+                <Link href="/" className="pl-4">
                   <i
                     className="bx bxl-instagram text-2xl text-primary hover:text-yellow"
                   ></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -469,30 +470,30 @@ const Post = ({ blog, profile }) => {
             © Copyright 2022. All right reserved, ATOM.
           </p>
           <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-            <a href="/">
+            <Link href="/">
               <i
                 className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
               ></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
     </div>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js" async/>
 
 
 

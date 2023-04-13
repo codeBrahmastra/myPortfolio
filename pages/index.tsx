@@ -2,10 +2,11 @@ import { createClient } from "next-sanity";
 import PortableText from "react-portable-text";
 import Head from "next/head";
 import Script from "next/script";
-import imageUrlBuilder from '@sanity/image-url'
+import imageUrlBuilder from  '@sanity/image-url'; 
 import { useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
+// import react/no-unescaped-entities
 
 
 
@@ -34,9 +35,9 @@ export default function Home({ blogs, profile }) {
 
   return (
     <>
-      <script src="/assets/js/main.js"></script>
+      <script src="/assets/js/main.js" async/>
       <Head>
-        <meta charset="utf-8" />
+        {/* <meta charset="utf-8" /> */}
 
         <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
 
@@ -79,7 +80,7 @@ export default function Home({ blogs, profile }) {
         <meta name="twitter:site" content="@tailwindmade" />
 
         <link
-          crossorigin="crossorigin"
+          // crossorigin="crossorigin"
           href="https://fonts.gstatic.com"
           rel="preconnect"
         />
@@ -101,7 +102,7 @@ export default function Home({ blogs, profile }) {
         />
 
         <link
-          crossorigin="anonymous"
+          // crossorigin="anonymous"
           href="/assets/styles/main.min.css"
           media="screen"
           rel="stylesheet"
@@ -121,19 +122,19 @@ export default function Home({ blogs, profile }) {
       {/* <div className="w-full z-50 top-0 py-3 sm:py-5  absolute ">
         <div className="container flex items-center justify-between">
           <div>
-            <a href="/">
+            <Link href="/">
               <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-indian-republic-day-jai-hind-abstract-brush-background-png-image_3782717.jpg" className="w-24 lg:w-20" alt="logo image" />
-            </a>
+            </Link>
           </div>
           <div className="hidden lg:block">
             <ul className="flex items-center">
 
               <li className="group pl-6">
 
-                <a href="#about"> <span
+                <Link href="#about"> <span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >About</span> </a>
+                >About</span> </Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -142,10 +143,10 @@ export default function Home({ blogs, profile }) {
 
               <li className="group pl-6">
 
-                <a href="#services"><span
+                <Link href="#services"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Services</span ></a>
+                >Services</span ></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -154,10 +155,10 @@ export default function Home({ blogs, profile }) {
 
               <li className="group pl-6">
 
-                <a href="#portfolio"><span
+                <Link href="#portfolio"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Portfolio</span></a>
+                >Portfolio</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -166,10 +167,10 @@ export default function Home({ blogs, profile }) {
 
               <li className="group pl-6">
 
-                <a href="#clients"><span
+                <Link href="#clients"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Clients</span></a>
+                >Clients</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -178,10 +179,10 @@ export default function Home({ blogs, profile }) {
 
               <li className="group pl-6">
 
-                <a href="#work"><span
+                <Link href="#work"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Work</span></a>
+                >Work</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -190,10 +191,10 @@ export default function Home({ blogs, profile }) {
 
               <li className="group pl-6">
 
-                <a href="#statistics"><span
+                <Link href="#statistics"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Statistics</span></a>
+                >Statistics</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -202,10 +203,10 @@ export default function Home({ blogs, profile }) {
 
               <li className="group pl-6">
 
-                <a href="#blog"><span
+                <Link href="#blog"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Blog</span></a>
+                >Blog</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -214,10 +215,10 @@ export default function Home({ blogs, profile }) {
 
               <li className="group pl-6">
 
-                <a href="#contact"><span
+                <Link href="#contact"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Contact</span></a>
+                >Contact</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -346,7 +347,7 @@ export default function Home({ blogs, profile }) {
               <h1
                 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
               >
-                Hello I'm {profile.name}
+                Hello I &apos; m {profile.name}
               </h1>
               <div
                 className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
@@ -354,7 +355,7 @@ export default function Home({ blogs, profile }) {
                 <div
                   className="flex items-center justify-center pl-0 sm:justify-start md:pl-1"
                 >
-                  <p className="font-body text-lg uppercase text-white">Let's connect</p>
+                  <p className="font-body text-lg uppercase text-white">Let &apos; s connect</p>
                   <div className="hidden sm:block">
                     <i className="bx bx-chevron-right text-3xl text-yellow"></i>
                   </div>
@@ -362,31 +363,31 @@ export default function Home({ blogs, profile }) {
                 <div
                   className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0"
                 >
-                  <a href={profile.fblink}>
+                  <Link href={profile.fblink}>
                     <i
                       className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-twitter text-2xl text-white hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-dribbble text-2xl text-white hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-linkedin text-2xl text-white hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-instagram text-2xl text-white hover:text-yellow"
                     ></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -405,7 +406,7 @@ export default function Home({ blogs, profile }) {
               <h4
                 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
               >
-                I'm Manoj K Mishra, a Software Developer, Full Stack Developer, MERN Stack Developer, React.js Developer, Frontend Developer, Next.js Developer
+                I &apos; m Manoj K Mishra, a Software Developer, Full Stack Developer, MERN Stack Developer, React.js Developer, Frontend Developer, Next.js Developer
               </h4>
               <p className="pt-6 font-body leading-relaxed text-grey-20">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -430,31 +431,31 @@ export default function Home({ blogs, profile }) {
                 <div
                   className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0"
                 >
-                  <a href="/">
+                  <Link href="/">
                     <i
                       className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-twitter text-2xl text-primary hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-dribbble text-2xl text-primary hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"
                     ></i>
-                  </a>
-                  <a href="/" className="pl-4">
+                  </Link>
+                  <Link href="/" className="pl-4">
                     <i
                       className="bx bxl-instagram text-2xl text-primary hover:text-yellow"
                     ></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -507,7 +508,7 @@ export default function Home({ blogs, profile }) {
           <h2
             className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
           >
-            Here's what I'm good at
+            Here &apos; s what I &apos; m good at
           </h2>
           <h3
             className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
@@ -686,13 +687,13 @@ export default function Home({ blogs, profile }) {
           <h3
             className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
           >
-            Here's what I have done with the past
+            Here &apos; s what I have done with the past
           </h3>
 
           <div
             className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
           >
-            <a
+            <Link
               href="/"
               className="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
@@ -701,8 +702,8 @@ export default function Home({ blogs, profile }) {
                 className="w-full shadow"
                 alt="portfolio image"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="/"
               className="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
@@ -711,8 +712,8 @@ export default function Home({ blogs, profile }) {
                 className="w-full shadow"
                 alt="portfolio image"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="/"
               className="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
@@ -721,8 +722,8 @@ export default function Home({ blogs, profile }) {
                 className="w-full shadow"
                 alt="portfolio image"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="/"
               className="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
@@ -731,7 +732,7 @@ export default function Home({ blogs, profile }) {
                 className="w-full shadow"
                 alt="portfolio image"
               />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -796,7 +797,7 @@ export default function Home({ blogs, profile }) {
           <h3
             className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
           >
-            Here's what I did before freelancing
+            Here &apos; s what I did before freelancing
           </h3>
 
           <div className="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
@@ -1058,11 +1059,11 @@ export default function Home({ blogs, profile }) {
             >
               {blogs.map((item) => {
                 console.log(item);
-                return <a key={item.slug.current} href={"/blog/" + item.slug.current} className="shadow">
+                return <Link key={item.slug.current} href={"/blog/" + item.slug.current} className="shadow">
 
 
                   <div
-                    style={{ "backgroundImage": `url(${builder.image(item.blogimage).width(200).url() || '/assets/img/post-01.png'})` }}
+                    style={{ "backgroundImage": `url(${builder.image(item.blogimage).width(200).url() ||  '/assets/img/post-01.png' })` }}
                     className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
                   >
                     <span
@@ -1078,9 +1079,9 @@ export default function Home({ blogs, profile }) {
                     <span className="block pt-2 font-body text-grey-20"
                     >{item.metadesc}</span          >
                   </div>
-                </a>
+                </Link>
               })}
-              {/* <a href="/post" className="shadow">
+              {/* <Link href="/post" className="shadow">
                   <div
                     style={{ backgroundImage: "url(/assets/img/post-02.png)" }}
                     className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
@@ -1099,8 +1100,8 @@ export default function Home({ blogs, profile }) {
                     >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                       eiusmod tempor incididunt ut labore et dolore magna aliqua.</span          >
                   </div>
-                </a>
-                <a href="/post" className="shadow">
+                </Link>
+                <Link href="/post" className="shadow">
                   <div
                     style={{ backgroundImage: "url(/assets/img/post-03.png)" }}
                     className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
@@ -1119,7 +1120,7 @@ export default function Home({ blogs, profile }) {
                     >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                       eiusmod tempor incididunt ut labore et dolore magna aliqua.</span          >
                   </div>
-                </a> */}
+                </Link> */}
             </div>
           </div>
         </div>
@@ -1128,7 +1129,7 @@ export default function Home({ blogs, profile }) {
           <h2
             className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
           >
-            Here's a contact form
+            Here &apos; s a contact form
           </h2>
           <h4
             className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
@@ -1229,7 +1230,7 @@ export default function Home({ blogs, profile }) {
               className="text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl"
             >
               Keep <span className="font-bold">up-to-date</span> <br />
-              with what I'm up to
+              with what I &apos; m up to
             </h3>
             <form className="mt-6 flex flex-col justify-center sm:flex-row">
               <input
@@ -1254,23 +1255,23 @@ export default function Home({ blogs, profile }) {
             © Copyright 2022. All right reserved, ATOM.
           </p>
           <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-            <a href="/">
+            <Link href="/">
               <i
                 className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
               ></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-dribbble text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href="/" className="pl-4">
+            </Link>
+            <Link href="/" className="pl-4">
               <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Head from "next/head";
 import Script from "next/script";
 import imageUrlBuilder from '@sanity/image-url'
 import { useEffect } from "react";
+import Link from 'next/link';
 
 
 const Navbar = ({profile}) => {
@@ -14,19 +15,19 @@ const Navbar = ({profile}) => {
        <div className="w-full z-50 top-0 py-3 sm:py-5  absolute bg-[#463492]">
         <div className="container flex items-center justify-between">
           <div>
-            <a href="/">
+            <Link href="/">
               <h2 className= "text-white">{profile.title}</h2>
-            </a>
+            </Link>
           </div>
           <div className="hidden lg:block">
             <ul className="flex items-center mr-5">
 
               <li className="group pl-6">
 
-                <a href="#about"> <span
+                <Link href="#about"> <span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >About</span> </a>
+                >About</span> </Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -35,10 +36,10 @@ const Navbar = ({profile}) => {
 
               <li className="group pl-6">
 
-              <a href="#services"><span
+              <Link href="#services"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Services</span ></a>
+                >Services</span ></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -47,10 +48,10 @@ const Navbar = ({profile}) => {
 
               <li className="group pl-6">
 
-              <a href="#portfolio"><span
+              <Link href="#portfolio"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Portfolio</span></a>
+                >Portfolio</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -59,10 +60,10 @@ const Navbar = ({profile}) => {
 
               <li className="group pl-6">
 
-              <a href="#clients"><span
+              <Link href="#clients"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Clients</span></a>
+                >Clients</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -71,10 +72,10 @@ const Navbar = ({profile}) => {
 
               <li className="group pl-6">
 
-              <a href="#work"><span
+              <Link href="#work"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Work</span></a>
+                >Work</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -83,10 +84,10 @@ const Navbar = ({profile}) => {
 
               <li className="group pl-6">
 
-              <a href="#statistics"><span
+              <Link href="#statistics"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Statistics</span></a>
+                >Statistics</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -95,10 +96,10 @@ const Navbar = ({profile}) => {
 
               <li className="group pl-6">
 
-              <a href="#blog"><span
+              <Link href="#blog"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Blog</span></a>
+                >Blog</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -107,10 +108,10 @@ const Navbar = ({profile}) => {
 
               <li className="group pl-6">
 
-              <a href="#contact"><span
+              <Link href="#contact"><span
 
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                >Contact</span></a>
+                >Contact</span></Link>
 
                 <span
                   className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
